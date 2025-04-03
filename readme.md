@@ -2,7 +2,6 @@
 
 ---
 
-```markdown
 # 🏰 Dungeon Adventure
 
 A classic, text-based dungeon exploration game written in Node.js. Enter a mysterious dungeon, collect treasures, avoid deadly traps, and escape with your life — if you can!
@@ -64,34 +63,8 @@ Type these in the terminal during gameplay:
 
 ## 🗺️ Dungeon Map (Mermaid)
 
-```mermaid
-graph TD
-  Entrance["🏰 Entrance"]
-  Hallway["🕯️ Hallway"]
-  TreasureRoom["💰 Treasure Room"]
-  TrapRoom["⚠️ Trap Room"]
-  MonsterRoom["👹 Monster Room"]
-  ExitRoom["🚪 Exit Room"]
 
-  Entrance -->|north| Hallway
-  Entrance -->|east| TreasureRoom
-
-  Hallway -->|south| Entrance
-  Hallway -->|north| MonsterRoom
-  Hallway -->|west| TrapRoom
-
-  TreasureRoom -->|west| Entrance
-  TreasureRoom -->|north| TrapRoom
-
-  TrapRoom -->|east| Hallway
-  TrapRoom -->|south| TreasureRoom
-
-  MonsterRoom -->|south| Hallway
-  MonsterRoom -->|north| ExitRoom
-
-  ExitRoom -->|locked| MonsterRoom
-```
-
+![World Map](map.png)
 ---
 
 ## 📌 Notes
