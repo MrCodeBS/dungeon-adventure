@@ -1,0 +1,25 @@
+graph TD
+  Entrance["🏰 Entrance"]
+  Hallway["🕯️ Hallway"]
+  TreasureRoom["💰 Treasure Room"]
+  TrapRoom["⚠️ Trap Room"]
+  MonsterRoom["👹 Monster Room"]
+  ExitRoom["🚪 Exit Room"]
+
+  Entrance -->|north| Hallway
+  Entrance -->|east| TreasureRoom
+
+  Hallway -->|south| Entrance
+  Hallway -->|north| MonsterRoom
+  Hallway -->|west| TrapRoom
+
+  TreasureRoom -->|west| Entrance
+  TreasureRoom -->|north| TrapRoom
+
+  TrapRoom -->|east| Hallway
+  TrapRoom -->|south| TreasureRoom
+
+  MonsterRoom -->|south| Hallway
+  MonsterRoom -->|north| ExitRoom
+
+  ExitRoom -->|locked| MonsterRoom
